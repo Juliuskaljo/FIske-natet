@@ -62,7 +62,7 @@ const AddCatches = () => {
 
             <section className="column">
 				<label> Date </label>
-				<input type="date"
+				<input type="string"
 					value={date}
 					onChange={e => setDate(e.target.value)}
 					/>

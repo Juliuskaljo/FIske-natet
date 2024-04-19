@@ -24,9 +24,13 @@ const CatchList = () => {
       <h2>Catch List</h2>
       <ul>
         {catches.map(catchData => (
-          <div className='catchContainer' key={catchData.id}>
-            <strong>Name:</strong> {catchData.name}, <strong>Species:</strong> {catchData.species}, <strong>Length:</strong> {catchData.length}
-          </div>
+          <li key={catchData.id}>
+            <strong>Name:</strong> {catchData.name},
+             <strong>Species:</strong> {catchData.species},
+              <strong>Length:</strong> {catchData.length}
+              <strong>Weight:</strong> {catchData.weight},
+              <strong>Date:</strong> {catchData.datum},
+          </li>
         ))}
       </ul>
     </div>
