@@ -46,3 +46,14 @@
 // };
 
 // export { Catches };
+
+
+const Catches = () => {
+	return (
+		<div>
+			<h1>Catches</h1>
+		</div>
+	)
+}
+
+export default Catches;

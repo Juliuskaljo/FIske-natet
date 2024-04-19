@@ -1,18 +1,21 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import Auth from "../login/Login.jsx";
+import Login from "../login/Login.jsx";
+import Catches from "../components/Catches.jsx";
+import Weather from "../components/Weather.jsx";
+import Feature from "../components/Feature.jsx";
+
 const Root = () => (
 	<div className="app">
 		<header>
-			<h1>Fiskenätet</h1>
-			<Auth/>
 			<nav className="nav-meny">
 				<ul>
 					<ol>
-						<NavLink to="/">Home</NavLink>
-						<NavLink to="/Find">Find</NavLink>
-						<NavLink to="/about">About
-						</NavLink>
-						<NavLink to="/contact">Contact</NavLink>
+						<NavLink to="/Login">Login</NavLink>
+						<NavLink to="/Catches">Cathes</NavLink>
+						<NavLink to="/Weather">Weather</NavLink>
+						<NavLink to="/Feature">Feature</NavLink>
+
 					</ol>	
 				</ul>
 			</nav>
