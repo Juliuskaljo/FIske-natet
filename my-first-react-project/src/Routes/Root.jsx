@@ -1,8 +1,10 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
-
+import Auth from "../login/Login.jsx";
 const Root = () => (
 	<div className="app">
 		<header>
+			<h1>Fiskenätet</h1>
+			<Auth/>
 			<nav className="nav-meny">
 				<ul>
 					<ol>
