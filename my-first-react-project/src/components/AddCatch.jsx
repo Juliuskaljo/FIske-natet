@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useStore } from '../data/store.js'
 import { addCatches, getCatches } from '../data/crud.js'
+import { updateCatches } from '../data/crud.js' // Correct import
 
 const AddCatches = () => {
 	const [isLoading, setIsLoading] = useState(false)
@@ -61,7 +62,7 @@ const AddCatches = () => {
 
             <section className="column">
 				<label> Date </label>
-				<input type="timestamp"
+				<input type="date"
 					value={date}
 					onChange={e => setDate(e.target.value)}
 					/>

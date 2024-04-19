@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import { editCatch, getCatches } from '../data/crud.js'
-import { useStore } from '../data/store.js'
+import { useState } from 'react';
+import { getCatches, updateCatches } from '../data/crud.js'; // Correct import
+import { useStore } from '../data/store.js';
 
-const editCatches = ({ catches, whenEditDone }) => {
-    const [disableButton, setDisableButton] = useState(false)
-    const [name, setName] = useState(catches.name)
-    const [length, setLength] = useState(catches.length)
-    const setCatches = useStore(state => state.setCatches)
+const EditCatches = ({ catches, whenEditDone }) => {
+    const [disableButton, setDisableButton] = useState(false);
+    const [name, setName] = useState(catches.name);
+    const [length, setLength] = useState(catches.length);
+    const setCatches = useStore(state => state.setCatches);
 
     const handleSave = async () => {
-        setDisableButton(true)
-        const updatedCatches = { name, length }
-        await editCatches(catches.key, updatedCatches)
-        const updatedList = await getCatches()
-        setCatches(updatedList)
-        whenEditDone()
-    }
+        setDisableButton(true);
+        const updatedCatches = { name, length };
+        await updateCatches(catches.key, updatedCatches); // Correct function call
+        const updatedList = await getCatches();
+        setCatches(updatedList);
+        whenEditDone();
+    };
 
     return (
         <>
@@ -39,7 +39,7 @@ const editCatches = ({ catches, whenEditDone }) => {
             </section>
             <button disabled={disableButton} onClick={handleSave}>Save</button>
         </>
-    )
-}
+    );
+};
 
-export default editCatch
+export default EditCatches 

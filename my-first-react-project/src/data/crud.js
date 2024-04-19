@@ -26,10 +26,10 @@ async function deleteCatches(key) {
     await deleteDoc(docRef);
 }
 
-async function editCatches(key, updatedCatches) {
+async function updateCatches(key, updatedCatches) {
     const docRef = doc(collectionRef, key);
     await updateDoc(docRef, updatedCatches);
 }
 
-export { getCatches, addCatches, deleteCatches, editCatches };
+export { getCatches, addCatches, deleteCatches, updateCatches };
 

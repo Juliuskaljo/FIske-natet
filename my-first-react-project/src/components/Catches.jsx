@@ -47,22 +47,42 @@
 
 // export { Catches };
 
-import AddCatches from "../components/AddCatch.jsx"
-import ViewCatch from "./ViewCatch.jsx";
+import { useEffect, useState } from 'react';
+import { getCatches } from '../data/crud.js';
+import { useStore } from '../data/store.js';
+import AddCatches from '../components/AddCatch.jsx';
+import ViewCatch from './ViewCatch.jsx';
+import { updateCatches } from '../data/crud.js' // Correct import
+import '../App.css'
 
 const Catches = () => {
-	return (
+    const [catches, setCatches] = useState([]);
+    const setCatchesInStore = useStore(state => state.setCatches);
+
+    useEffect(() => {
+        const fetchCatches = async () => {
+            const catchesFromDb = await getCatches();
+            setCatches(catchesFromDb);
+            setCatchesInStore(catchesFromDb);
+        };
+
+        fetchCatches();
+    }, [setCatchesInStore]);
+
+    return (
         <section>
-		<div>
-			<h1>Catches</h1>
-            <AddCatches />
-		</div>
-        
-        <div>
-            <ViewCatch />
-        </div>
+            <div>
+                <h1>Catches</h1>
+                <AddCatches />
+            </div>
+
+            <div>
+                {catches.map(catchData => (
+                    <ViewCatch key={catchData.key} catchData={catchData} />
+                ))}
+            </div>
         </section>
-	)
-}
+    );
+};
 
 export default Catches;
