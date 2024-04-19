@@ -1,24 +1,13 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import '../App.css';
+import { useState } from 'react';
 
 const Root = () => (
-	<div className="app">
-		<header>
-			<nav className="nav-meny">
-				<ul>
-					<ol>
-						<NavLink to="/">Home</NavLink>
-						<NavLink to="/Find">Find</NavLink>
-						<NavLink to="/about">About
-						</NavLink>
-						<NavLink to="/contact">Contact</NavLink>
-					</ol>	
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<Outlet />
-		</main>
-	</div>
-)
+    
+        <main>
+            <h1>Fiskenätet</h1>
+            
+        </main>
+);
 
 export default Root;
