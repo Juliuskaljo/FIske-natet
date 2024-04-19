@@ -1,8 +1,14 @@
+.app {
+    background-image:url('../src/assets/layered-peaks-haikei.svg') ;
+    background-size: cover;
+}
+
 .form {
 	margin: 0.5em 0em;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
-	padding: 1em 0;
+    
+	/* padding: 1em 0; */
 }
 .form h3 {
 	margin: 0;
@@ -20,9 +26,7 @@
 .flex-grow {
 	flex-grow: 1;
 }
-.border-bottom {
-	border-bottom: 1px dotted darkgray;
-}
+
 .alternate:nth-child(even) {
 	background-color: rgb(244, 201, 208);
 }
@@ -52,9 +56,10 @@
 }
 
 .catchContainer {
-    border: 2px solid orange;
+    
     height: 100px;
     margin: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 h1, h2, h3 {
@@ -90,3 +95,34 @@ h1, h2, h3 {
 	</section>
   )}
   */
+
+  /* Styling for navigation menu */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.navMenu {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  text-align: center;
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 20px;
+  
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
+}
+
+a {
+margin: 7px;
+}

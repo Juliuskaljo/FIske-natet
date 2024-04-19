@@ -8,16 +8,12 @@ import Feature from "../components/Feature.jsx";
 const Root = () => (
 	<div className="app">
 		<header>
-			<nav className="nav-meny">
-				<ul>
-					<ol>
-						<NavLink to="/Login">Login</NavLink>
-						<NavLink to="/Catches">Cathes</NavLink>
-						<NavLink to="/Weather">Weather</NavLink>
-						<NavLink to="/Feature">Feature</NavLink>
-
-					</ol>	
-				</ul>
+			<nav className="navMenu">
+				<a><NavLink to="/Login">Login</NavLink></a>	
+				<a><NavLink to="/Catches">Cathes</NavLink></a>	
+				<a>	<NavLink to="/Weather">Weather</NavLink></a>	
+				<a>	<NavLink to="/Feature">Feature</NavLink></a>	
+				<div class="dot"></div>	
 			</nav>
 		</header>
 		<main>

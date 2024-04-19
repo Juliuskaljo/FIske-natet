@@ -59,3 +59,10 @@ p {
     color: #0075FF;
     text-align: right;
 }
+
+.app {
+    background-color: orange;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
