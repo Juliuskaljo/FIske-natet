@@ -51,6 +51,21 @@
     flex-direction: column;
 }
 
+.catchContainer {
+    border: 2px solid orange;
+    height: 100px;
+    margin: 4px;
+}
+
+h1, h2, h3 {
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-meny {
+    text-align: center;
+}
+
     /* margin-bottom:1em; */
 
     /* margin-bottom: 5px; */

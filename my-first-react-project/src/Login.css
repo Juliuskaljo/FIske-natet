@@ -1,0 +1,61 @@
+.Login-container {
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column; 
+}
+
+.loginEmail {
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+}
+.loginPassword {
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Login-btn {
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.Login-btn:hover {
+    background-color: orange;
+}
+
+.Logout-btn {
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.Logout-btn:hover {
+    background-color: orange;
+}
+
+.username, .password {
+    font-size: 0.8em;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+p {
+    margin: 0;
+}
+.forgot-password {
+    font-size: 0.7em;
+    color: #0075FF;
+    text-align: right;
+}
