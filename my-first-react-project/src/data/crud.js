@@ -4,11 +4,11 @@ import { db } from './fire.js';
 const collectionName = 'catches';
 const collectionRef = collection(db, collectionName);
 
-async function GetCatches() {
-    const catchCollection = collection(db, collectionName);
-    const catchSnapshot = await getDocs(catchCollection);
-    const catchList = catchSnapshot.docs.map(doc => withKey(doc));
-    return catchList;
+async function getCatches() {
+    const catchesCollection = collection(db, collectionName);
+    const catchesSnapshot = await getDocs(catchesCollection);
+    const catchesList = catchesSnapshot.docs.map(doc => withKey(doc));
+    return catchesList;
 }
 
 function withKey(doc) {
@@ -17,19 +17,19 @@ function withKey(doc) {
     return o;
 }
 
-async function AddCatch(catchData) {
-    await addDoc(collectionRef, catchData);
+async function addCatches(catches) {
+    await addDoc(collectionRef, catches);
 }
 
-async function deleteCatch(key) {
+async function deleteCatches(key) {
     const docRef = doc(collectionRef, key);
     await deleteDoc(docRef);
 }
 
-async function editCatch(key, updatedCatch) {
+async function editCatches(key, updatedCatches) {
     const docRef = doc(collectionRef, key);
-    await updateDoc(docRef, updatedCatch);
+    await updateDoc(docRef, updatedCatches);
 }
 
-export { GetCatches, AddCatch, deleteCatch, editCatch };
+export { getCatches, addCatches, deleteCatches, editCatches };
 

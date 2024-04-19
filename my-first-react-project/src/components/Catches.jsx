@@ -47,12 +47,21 @@
 
 // export { Catches };
 
+import AddCatches from "../components/AddCatch.jsx"
+import ViewCatch from "./ViewCatch.jsx";
 
 const Catches = () => {
 	return (
+        <section>
 		<div>
 			<h1>Catches</h1>
+            <AddCatches />
 		</div>
+        
+        <div>
+            <ViewCatch />
+        </div>
+        </section>
 	)
 }
 
