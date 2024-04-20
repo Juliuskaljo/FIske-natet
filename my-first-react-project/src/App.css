@@ -3,13 +3,66 @@
     background-size: cover;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
 .form {
-	margin: 0.5em 0em;
+	margin: 0 auto;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
-    
-	/* padding: 1em 0; */
+  width: 270px;
 }
+.button-div {
+  display: flex;
+  justify-content: center;
+}
+.register-catch-btn {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+  .register-catch-btn:hover,
+  .register-catch-btn:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  .register-catch-btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .register-catch-btn:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+  }
+
 .form h3 {
 	margin: 0;
 }
@@ -27,9 +80,7 @@
 	flex-grow: 1;
 }
 
-.alternate:nth-child(even) {
-	background-color: rgb(244, 201, 208);
-}
+
 
 .change-Info{
     background-color: aliceblue;
@@ -55,16 +106,7 @@
     flex-direction: column;
 }
 
-.catchContainer {
-    background-color: white;
-    color: black;
-    opacity: 80%;
-    height: 100px;
-    width: 350px;
-    margin: 4px;
-    border-radius: 10px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
+
 
 h1, h2, h3 {
     justify-content: center;
@@ -102,31 +144,67 @@ h1, h2, h3 {
 
   /* Styling for navigation menu */
 
-* {
-    margin: 0;
-    padding: 0;
-}
+
 .navMenu {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
-  text-align: center;
+  font-weight: 500;
 }
 
-.navMenu a {
+
+.nav-login {
   color: #f6f4e6;
   text-transform: uppercase;
   font-weight: 500;
   width: 20px;
-  
+  margin: 7px;
+  text-align: center;
+  text-decoration: none;
 }
 
-.navMenu a:hover {
+.nav-login:hover {
   color: #fddb3a;
+  margin: 7px;
+  text-decoration: underline;
 }
 
-a {
-margin: 7px;
+* {
+  margin: 0;
+  padding: 0;
+}
+.catchContainer {
+  justify-content: center;
+  background-color: white;
+  color: black;
+  opacity: 80%;
+  height: 100px;
+  width: 350px;
+  margin: 0px;
+  border-radius: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  display: flex;
+  align-items: center; 
+  margin: 5px auto;
+}
+
+
+.left-side {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  color: orange;
+  text-align: left;
+}
+
+.middle {
+  display: flex;
+  text-align: center; 
+  color: rgb(39, 122, 161);
+}
+
+.right-side {
+  text-align: right; 
+  color:aqua;
+}
+.editDeleteButtons {
+  margin-top: -70px;
+  margin-right: 5px;
 }

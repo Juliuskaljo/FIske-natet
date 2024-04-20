@@ -9,11 +9,10 @@ const Root = () => (
 	<div className="app">
 		<header>
 			<nav className="navMenu">
-				<a><NavLink to="/Login">Login</NavLink></a>	
-				<a><NavLink to="/Catches">Cathes</NavLink></a>	
-				<a>	<NavLink to="/Weather">Weather</NavLink></a>	
-				<a>	<NavLink to="/Feature">Feature</NavLink></a>	
-				<div class="dot"></div>	
+				<NavLink to="/Login" className="nav-login">Login</NavLink>
+				<NavLink to="/Catches" className="nav-login">Catches</NavLink>	
+				<NavLink to="/Weather" className="nav-login">Weather</NavLink>	
+				<NavLink to="/Feature" className="nav-login">Feature</NavLink>	
 			</nav>
 		</header>
 		<main>

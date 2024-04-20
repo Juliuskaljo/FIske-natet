@@ -83,10 +83,11 @@ const AddCatches = () => {
 					onChange={e => setWeight(e.target.value)}
 					/>
 			</section>
-
-			<button
-				disabled={isLoading}
-				onClick={handleSubmit} type="submit"> Register </button>
+				<div className='button-div'>
+					<button className='register-catch-btn'
+					disabled={isLoading}
+					onClick={handleSubmit} type="submit"> Register </button>
+				</div>
 			</form>
 		</section>
 	)

@@ -29,17 +29,26 @@ const ViewCatch = ({ catchData }) => { // Changed parameter name to catchData
                     <button onClick={() => setIsEditing(false)}>Done Editing</button>
                 </>
             ) : (
-                <>
+                
                     <div className="catchContainer">
+                    <div className="left-side">
                       Name:  {catchData.name} <br></br>
-                      Weight:  {catchData.weight} <br></br>
-                      Species:  {catchData.species} <br></br>
-                      Length:  {catchData.length} <br></br>
                       Date:  {catchData.datum}   
-                        </div> {/* Changed from catches to catchData */}
-                    <button onClick={() => setIsEditing(true)}>🖊️</button>
-                    <button disabled={isLoading} onClick={handleDelete}>Fire</button>
-                </>
+                     </div>
+                     <div className="middle">
+                      Weight:  {catchData.weight} 
+                      </div>
+                      <div className="right-side">
+                      Species:  {catchData.species} <br></br>
+                      Length:  {catchData.length} 
+                      </div>
+                      <div className="editDeleteButtons">
+                      <button onClick={() => setIsEditing(true)}>🖊️</button>
+                    <button disabled={isLoading} onClick={handleDelete}>🗑️</button>
+                    </div>
+                        </div> 
+                    
+                
             )}
         </section>
     )
