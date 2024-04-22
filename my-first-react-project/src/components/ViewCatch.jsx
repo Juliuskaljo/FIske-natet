@@ -33,7 +33,7 @@ const ViewCatch = ({ catchData }) => { // Changed parameter name to catchData
                     <div className="catchContainer">
                     <div className="left-side">
                       Name:  {catchData.name} <br></br>
-                      Date:  {catchData.datum}   
+                      Date:  {catchData.date}   
                      </div>
                      <div className="middle">
                       Weight:  {catchData.weight} 

@@ -29,7 +29,7 @@ const CatchList = () => {
              <strong>Species:</strong> {catchData.species},
               <strong>Length:</strong> {catchData.length}
               <strong>Weight:</strong> {catchData.weight},
-              <strong>Date:</strong> {catchData.datum},
+              <strong>Date:</strong> {catchData.date},
           </li>
         ))}
       </ul>

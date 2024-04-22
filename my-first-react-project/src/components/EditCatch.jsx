@@ -5,7 +5,7 @@ import { useStore } from '../data/store.js';
 const EditCatches = ({ catchData, whenEditDone }) => { // Changed parameter name to catchData
     const [disableButton, setDisableButton] = useState(false);
     const [name, setName] = useState(catchData.name); // Changed from catches to catchData
-    const [length, setLength] = useState(catchData.length); // Changed from catches to catchData
+     const [length, setLength] = useState(catchData.length); // Changed from catches to catchData
     const setCatches = useStore(state => state.setCatches);
 
     const handleSave = async () => {
